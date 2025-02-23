@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import useStore from "../store/zustand.js"; // Ensure correct path
+import useStore from "../Store/zustand.js"; // Ensure correct path
 
 const Projects = () => {
   const { projects, fetchProjects } = useStore(); // Get projects from Zustand
