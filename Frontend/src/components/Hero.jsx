@@ -14,7 +14,9 @@ const Hero = () => {
             <p className="py-6 font-semibold text-3xl">
              Passionate about making something functional and beautiful.
             </p>
+            <a href="/resume.docx" download="Neeraj_resume.docx">
             <button  className="btn btn-primary font-semibold text-2xl">My resume</button>
+            </a>
           </div>
         </div>
       </div>
