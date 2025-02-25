@@ -4,6 +4,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import projectRoutes from './Routes/ProjectRoutes.js';
 import contactRoutes from './Routes/ContactRoutes.js';
+import authRoutes from "./Routes/authRoutes.js";
 
 dotenv.config();
 const PORT = process.env.PORT||4000;
@@ -18,4 +19,5 @@ app.get("/",(req,res)=>{
 });
 app.use("/api/projects",projectRoutes);
 app.use("/api/contact",contactRoutes);
+app.use("/api/auth", authRoutes);
 app.listen(PORT,()=>console.log("Server is running"));
