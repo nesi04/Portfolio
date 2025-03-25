@@ -20,7 +20,6 @@ const Projects = () => {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div key={index} className="card w-full max-w-md mx-auto shadow-xl border border-gray-300 flex flex-col gap-4">
-            
               <div className="card-body gap-4">
                 <h2 className="card-title">{project.title}</h2>
                 <p>{project.description}</p>
@@ -35,8 +34,16 @@ const Projects = () => {
                   </div>
                 </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Live Demo</button>
-                  <button className="btn btn-primary">GitHub Link</button>
+                  {project.liveDemo && (
+                    <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                      Live Demo
+                    </a>
+                  )}
+                  {project.gitHubLink && (
+                    <a href={project.gitHubLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                      GitHub Link
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
