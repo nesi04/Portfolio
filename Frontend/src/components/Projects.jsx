@@ -20,13 +20,7 @@ const Projects = () => {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div key={index} className="card w-full max-w-md mx-auto shadow-xl border border-gray-300 flex flex-col gap-4">
-              <figure className="overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-auto object-cover"
-                />
-              </figure>
+            
               <div className="card-body gap-4">
                 <h2 className="card-title">{project.title}</h2>
                 <p>{project.description}</p>
